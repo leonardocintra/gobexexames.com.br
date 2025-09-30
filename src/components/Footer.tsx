@@ -11,7 +11,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Gobex</span>
               </div>
-              <span className="text-xl font-bold">Gobex Exames</span>
+              <span className="text-xl font-bold">G</span>
             </div>
             <p className="text-gray-300 max-w-md leading-relaxed">
               Gobex é um laboratório de análises clínicas e citológicas que emprega as mais modernas técnicas na busca por resultados precisos. Isso facilita muito na indicação do tratamento médico mais adequado a cada situação específica do paciente.
