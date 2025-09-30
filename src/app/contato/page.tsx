@@ -1,39 +1,8 @@
 "use client";
-import { useState } from "react";
+
+import ContactForm from "@/components/ContactForm";
 
 export default function ContatoPage() {
-  const [formData, setFormData] = useState({
-    nome: "",
-    email: "",
-    telefone: "",
-    assunto: "",
-    mensagem: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
-    setFormData({
-      nome: "",
-      email: "",
-      telefone: "",
-      assunto: "",
-      mensagem: "",
-    });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
@@ -80,8 +49,7 @@ export default function ContatoPage() {
                   <h3 className="text-lg font-semibold text-gray-800">
                     Telefone
                   </h3>
-                  <p className="text-gray-600">(11) 1234-5678</p>
-                  <p className="text-gray-600">(11) 9 8765-4321</p>
+                  <p className="text-gray-600">(35) 99104-0975</p>
                 </div>
               </div>
 
@@ -105,8 +73,7 @@ export default function ContatoPage() {
                   <h3 className="text-lg font-semibold text-gray-800">
                     E-mail
                   </h3>
-                  <p className="text-gray-600">contato@labvida.com.br</p>
-                  <p className="text-gray-600">agendamento@labvida.com.br</p>
+                  <p className="text-gray-600">contato@gobexexames.com.br</p>
                 </div>
               </div>
 
@@ -136,9 +103,9 @@ export default function ContatoPage() {
                   <h3 className="text-lg font-semibold text-gray-800">
                     Endereço
                   </h3>
-                  <p className="text-gray-600">Rua das Análises, 123</p>
-                  <p className="text-gray-600">Bairro Saúde - São Paulo, SP</p>
-                  <p className="text-gray-600">CEP: 01234-567</p>
+                  <p className="text-gray-600">Av. São Vicente de Paulo, 230</p>
+                  <p className="text-gray-600">Bairro Centro - Cássia - MG</p>
+                  <p className="text-gray-600">CEP: 37980-000</p>
                 </div>
               </div>
 
@@ -194,157 +161,14 @@ export default function ContatoPage() {
                   />
                 </svg>
                 <p className="italic">
-                  [Colocar mapa do Google Maps com localização do laboratório]
+                  [Google Maps com localização do laboratório]
                 </p>
               </div>
             </div>
           </div>
 
           {/* Formulário de contato */}
-          <div>
-            <div className="bg-white rounded-2xl shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-800 mb-6">
-                Envie sua Mensagem
-              </h2>
-
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="nome"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Nome Completo *
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    required
-                    value={formData.nome}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Digite seu nome completo"
-                  />
-                </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      E-mail *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="seu@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label
-                      htmlFor="telefone"
-                      className="block text-sm font-medium text-gray-700 mb-2"
-                    >
-                      Telefone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="telefone"
-                      name="telefone"
-                      required
-                      value={formData.telefone}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                      placeholder="(11) 99999-9999"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="assunto"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Assunto *
-                  </label>
-                  <select
-                    id="assunto"
-                    name="assunto"
-                    required
-                    value={formData.assunto}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  >
-                    <option value="">Selecione o assunto</option>
-                    <option value="agendamento">Agendamento de Exame</option>
-                    <option value="resultados">Dúvidas sobre Resultados</option>
-                    <option value="valores">Informações sobre Valores</option>
-                    <option value="convenio">Convênios Médicos</option>
-                    <option value="outros">Outros Assuntos</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="mensagem"
-                    className="block text-sm font-medium text-gray-700 mb-2"
-                  >
-                    Mensagem *
-                  </label>
-                  <textarea
-                    id="mensagem"
-                    name="mensagem"
-                    required
-                    rows={5}
-                    value={formData.mensagem}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
-                    placeholder="Digite sua mensagem..."
-                  ></textarea>
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2"
-                >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                    />
-                  </svg>
-                  <span>Enviar Mensagem</span>
-                </button>
-              </form>
-            </div>
-
-            {/* Informações adicionais */}
-            <div className="mt-8 bg-blue-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-800 mb-3">
-                💡 Dica Importante
-              </h3>
-              <p className="text-blue-700 text-sm leading-relaxed">
-                Para agendamento de exames, tenha em mãos sua solicitação médica
-                e documento de identidade. Alguns exames requerem preparo
-                específico - consulte nossas orientações ou entre em contato
-                conosco.
-              </p>
-            </div>
-          </div>
+          <ContactForm />
         </div>
       </div>
     </div>

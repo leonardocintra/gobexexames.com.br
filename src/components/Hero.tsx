@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -11,15 +12,14 @@ export default function Hero() {
               <span className="text-cyan-200">Exames Laboratoriais</span>
             </h1>
             <p className="text-lg md:text-xl text-blue-100 mb-8 leading-relaxed">
-             Gobex é um laboratório de análises clínicas e citológicas que emprega as mais modernas técnicas na busca por resultados precisos. Isso facilita muito na indicação do tratamento médico mais adequado a cada situação específica do paciente.
+              Gobex é um laboratório de análises clínicas e citológicas que emprega as mais modernas técnicas na busca por resultados precisos. Isso facilita muito na indicação do tratamento médico mais adequado a cada situação específica do paciente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#exames"
+              <Link href="/consulta"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
               >
                 Consultar Exame
-              </a>
+              </Link>
               <a
                 href="/contato"
                 className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"

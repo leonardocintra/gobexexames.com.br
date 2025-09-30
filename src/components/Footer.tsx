@@ -9,14 +9,12 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
               <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">L</span>
+                <span className="text-white font-bold text-lg">Gobex</span>
               </div>
-              <span className="text-xl font-bold">LabVida</span>
+              <span className="text-xl font-bold">Gobex Exames</span>
             </div>
             <p className="text-gray-300 max-w-md leading-relaxed">
-              Laboratório de análises clínicas com mais de 15 anos de
-              experiência, oferecendo exames de qualidade com tecnologia
-              avançada e equipe especializada.
+              Gobex é um laboratório de análises clínicas e citológicas que emprega as mais modernas técnicas na busca por resultados precisos. Isso facilita muito na indicação do tratamento médico mais adequado a cada situação específica do paciente.
             </p>
           </div>
 
@@ -55,12 +53,14 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Contato</h3>
             <div className="space-y-2 text-gray-300">
-              <p>📞 (11) 1234-5678</p>
-              <p>📧 contato@labvida.com.br</p>
+              <p>📞 (35) 99104-0975</p>
+              <p>📧 contato@gobexexames.com.br</p>
               <p>
-                📍 Rua das Análises, 123
+                📍 Av. São Vicente de Paulo, 230
                 <br />
-                São Paulo - SP
+                Bairro Centro - Cássia - MG
+                <br />
+                CEP: 37980-000
               </p>
             </div>
           </div>
@@ -68,8 +68,11 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
           <p>
-            &copy; 2025 LabVida - Laboratório de Análises Clínicas. Todos os
+            &copy; 2021 - {new Date().getFullYear()} | Gobex Exames - Laboratório de Análises Clínicas. Todos os
             direitos reservados.
+          </p>
+          <p className="mt-2">
+            Desenvolvido por <Link target="_blank" className="underline" href={"https://leonardocintra.com.br"}>Leonardo Cintra</Link>
           </p>
         </div>
       </div>
