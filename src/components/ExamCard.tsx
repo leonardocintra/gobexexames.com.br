@@ -45,9 +45,6 @@ export default function ExamCard({ exam }: ExamCardProps) {
           {exam.title}
         </h3>
         <p className="text-gray-600 leading-relaxed mb-4">{exam.description}</p>
-        <button className="w-full bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors">
-          Solicitar Exame
-        </button>
       </div>
     </div>
   );

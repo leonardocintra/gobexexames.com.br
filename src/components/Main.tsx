@@ -5,22 +5,40 @@ import ExamCard from "./ExamCard";
 // Dados de exemplo - você pode substituir pelo seu array de dados
 const examsSample: IProduct[] = [
   {
+    title: "Check-up personalizado",
+    description:
+      "Check-up completo para avaliação geral da saúde. Para homens, mulheres e crianças!",
+    imageUrl: "/exams/checkup.png",
+  },
+  {
     title: "Toxicológico para CNH",
     description:
       "Exames para detecção de substâncias tóxicas e drogas no organismo. Utilizado em avaliações clínicas e ocupacionais.",
-    imageUrl: "/exams/cnh.png", // Placeholder para [Colocar imagem de medidor de glicose]
+    imageUrl: "/exams/cnh.png",
   },
   {
     title: "Preventivo / Papanicolau",
     description:
       "Exame preventivo para detecção precoce de câncer cervical. Importante para a saúde da mulher.",
-    imageUrl: "/exams/papanicolau.png", // Placeholder para [Colocar imagem de tubo de ensaio com sangue]
+    imageUrl: "/exams/papanicolau.png",
   },
   {
     title: "Exame IGE",
     description:
       "Identificação de parasitas, ovos e cistos nas fezes. Fundamental para diagnóstico de verminoses e outras parasitoses intestinais.",
-    imageUrl: "/exams/coceira.jpeg", // Placeholder para [Colocar imagem de microscópio analisando fezes]
+    imageUrl: "/exams/coceira.jpeg",
+  },
+  {
+    title: "Dengue",
+    description:
+      "Exame para detecção do vírus da dengue no organismo. Importante para diagnóstico e tratamento precoce.",
+    imageUrl: "/exams/dengue.png",
+  },
+  {
+    title: "Dores nas pernas ?",
+    description:
+      "D' dimero é um exame de sangue importante para detectar a presença de coágulos sanguíneos no corpo.",
+    imageUrl: "/exams/trombose.jpg",
   },
 ];
 
@@ -48,6 +66,10 @@ export default function Main({ exams = examsSample }: MainProps) {
           {exams.map((exam, index) => (
             <ExamCard key={index} exam={exam} />
           ))}
+        </div>
+
+        <div className="text-center text-gray-600 mb-16 text-4xl">
+          E muito mais exames! Consulte nossa equipe para mais informações.
         </div>
 
         {/* Seção adicional de benefícios */}

@@ -1,7 +1,3 @@
-"use client";
-
-import ContactForm from "@/components/ContactForm";
-
 export default function ContatoPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -20,19 +16,19 @@ export default function ContatoPage() {
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-2 gap-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="flex justify-center">
           {/* Informações de contato */}
-          <div>
-            <h2 className="text-2xl font-bold text-gray-800 mb-6">
+          <div className="w-full max-w-2xl">
+            <h2 className="text-2xl font-bold text-gray-800 mb-8 text-center">
               Informações de Contato
             </h2>
 
-            <div className="space-y-6">
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+            <div className="space-y-8">
+              <div className="flex items-start space-x-4 justify-center">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg
-                    className="w-6 h-6 text-blue-600"
+                    className="w-6 h-6 text-green-600"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -45,39 +41,22 @@ export default function ContatoPage() {
                     />
                   </svg>
                 </div>
-                <div>
+                <div className="text-center">
                   <h3 className="text-lg font-semibold text-gray-800">
-                    Telefone
+                    WhatsApp
                   </h3>
-                  <p className="text-gray-600">(35) 99104-0975</p>
-                </div>
-              </div>
-
-              <div className="flex items-start space-x-4">
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <svg
-                    className="w-6 h-6 text-green-600"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                  <a 
+                    href="https://wa.me/5535991040975" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-green-600 hover:text-green-700 transition-colors duration-200 font-medium"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                    />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    E-mail
-                  </h3>
-                  <p className="text-gray-600">contato@gobexexames.com.br</p>
+                    (35) 99104-0975
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4 justify-center">
                 <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-6 h-6 text-purple-600"
@@ -99,7 +78,7 @@ export default function ContatoPage() {
                     />
                   </svg>
                 </div>
-                <div>
+                <div className="text-center">
                   <h3 className="text-lg font-semibold text-gray-800">
                     Endereço
                   </h3>
@@ -109,7 +88,7 @@ export default function ContatoPage() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              <div className="flex items-start space-x-4 justify-center">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
                   <svg
                     className="w-6 h-6 text-orange-600"
@@ -125,7 +104,7 @@ export default function ContatoPage() {
                     />
                   </svg>
                 </div>
-                <div>
+                <div className="text-center">
                   <h3 className="text-lg font-semibold text-gray-800">
                     Horário de Funcionamento
                   </h3>
@@ -137,38 +116,7 @@ export default function ContatoPage() {
                 </div>
               </div>
             </div>
-
-            {/* Placeholder para mapa */}
-            <div className="mt-8 bg-gray-200 rounded-lg p-8 text-center">
-              <div className="text-gray-500">
-                <svg
-                  className="w-12 h-12 mx-auto mb-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                <p className="italic">
-                  [Google Maps com localização do laboratório]
-                </p>
-              </div>
-            </div>
           </div>
-
-          {/* Formulário de contato */}
-          <ContactForm />
         </div>
       </div>
     </div>
