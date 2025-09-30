@@ -1,6 +1,7 @@
 "use client";
 import { IProduct } from "@/types/IProduct";
 import ExamCard from "./ExamCard";
+import Link from 'next/link';
 
 // Dados de exemplo - você pode substituir pelo seu array de dados
 const examsSample: IProduct[] = [
@@ -50,6 +51,7 @@ export default function Main({ exams = examsSample }: MainProps) {
   return (
     <main className="py-16" id="exames">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Header da seção */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -149,6 +151,18 @@ export default function Main({ exams = examsSample }: MainProps) {
               </p>
             </div>
           </div>
+        </div>
+
+        <div className="text-center mt-16 bg-gradient-to-r from-pink-100 to-pink-200 rounded-2xl p-8 md:p-12 shadow-lg">
+          <h2 className="text-3xl md:text-4xl font-bold text-rose-800 mb-4">
+            Consultoria Biomédica Personalizada
+          </h2>
+          <p className="text-lg text-rose-600 max-w-2xl mx-auto leading-relaxed mb-8">
+            Além de exames, oferecemos consultoria biomédica para um cuidado integral da sua saúde.
+          </p>
+          <Link href="/biomedica" className="bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full text-lg transition duration-300">
+            Saiba mais
+          </Link>
         </div>
       </div>
     </main>
