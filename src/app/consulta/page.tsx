@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function ConsultaExamePage() {
   return (
     <div className="bg-gray-50 flex flex-col">
@@ -21,8 +23,14 @@ export default function ConsultaExamePage() {
           src="https://worklabweb.com.br/frame.php?Cliente=1687&i=3"
           name="I1"
           className="w-full border-0"
-          style={{ minHeight: '300px' }}
+          style={{ minHeight: '200px' }}
         ></iframe>
+
+        <div className="my-8 text-center">
+          <Link href={"/"} className="text-blue-600 hover:underline text-2xl font-medium">
+            &larr; Voltar para a página inicial
+          </Link>
+        </div>
       </div>
     </div>
   );
