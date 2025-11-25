@@ -65,6 +65,7 @@ export default function Footer() {
                 <br />
                 CEP: 37980-000
               </p>
+              <p className="mt-3">CNPJ: 44.253.890/0001-19</p>
             </div>
           </div>
         </div>
